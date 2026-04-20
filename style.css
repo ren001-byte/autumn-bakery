@@ -1,83 +1,42 @@
-
-/* Notion-inspired Design System */
-:root {
-  --color-bg: #ffffff;
-  --color-text: rgba(0,0,0,0.95);
-  --color-accent: #0075de;
-  --color-warm-white: #f6f5f4;
-  --color-warm-gray: #615d59;
-  --border-whisper: 1px solid rgba(0,0,0,0.1);
-  --shadow-card: rgba(0,0,0,0.04) 0px 4px 18px, rgba(0,0,0,0.027) 0px 2.025px 7.84688px, rgba(0,0,0,0.02) 0px 0.8px 2.925px, rgba(0,0,0,0.01) 0px 0.175px 1.04062px;
-}
-
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: var(--color-text);
-  background: var(--color-bg);
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
+    font-family: 'Lora', serif;
+    background-color: #fdfaf6;
+    color: #4a4038;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
-
 header {
-  padding: 80px 20px;
-  text-align: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4ece2;
 }
-
-h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  letter-spacing: -2.125px;
-  margin: 0;
+h1, h2 {
+    color: #8b5e3c;
 }
-
-section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
-
-.alt-section {
-  background-color: var(--color-warm-white);
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: -1.5px;
-  margin-bottom: 20px;
-}
-
 .menu-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
 }
-
 .item {
-  background: #ffffff;
-  border: var(--border-whisper);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-card);
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
-.item h3 {
-  font-size: 1.38rem;
-  font-weight: 700;
-  letter-spacing: -0.25px;
-  margin-top: 0;
+.item img {
+    width: 100%;
+    border-radius: 8px;
 }
-
-.placeholder-img {
-  width: 100%;
-  height: 200px;
-  background: #e0e0e0;
-  border-radius: 12px 12px 0 0;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #757575;
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9rem;
 }
