@@ -16,6 +16,9 @@
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: var(--bg); 
+            /* Minimal autumn leaf pattern */
+            background-image: radial-gradient(#e0dcd7 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
             color: var(--text); 
             margin: 0; 
             line-height: 1.6;
@@ -35,8 +38,8 @@
         .nav-links a { text-decoration: none; color: var(--text); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
         
         .hero {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=1600');
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=1600');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -48,16 +51,24 @@
         }
         .hero h1 { color: white; font-size: 3rem; max-width: 800px; }
         
+        .story-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 5%;
+            text-align: center;
+        }
+        
         .grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 4rem 5%;
+            padding: 0 5% 4rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
-        .card { background: #fff; border: 1px solid #f0f0f0; padding: 1.5rem; }
-        .card img { width: 100%; height: 400px; object-fit: cover; margin-bottom: 1rem; }
+        .card { background: #fff; border: 1px solid #f0f0f0; padding: 1.5rem; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 300px; object-fit: cover; margin-bottom: 1rem; }
         .card h3 { font-size: 1.5rem; margin: 0.5rem 0; }
         
         footer { text-align: center; padding: 4rem; background: #fff; border-top: 1px solid #eee; }
@@ -67,9 +78,8 @@
     <nav class="navbar">
         <div class="logo">Autumn Bakery</div>
         <ul class="nav-links">
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#menu">Shop</a></li>
+            <li><a href="#story">Our Story</a></li>
         </ul>
     </nav>
 
@@ -79,22 +89,28 @@
         </div>
     </header>
 
-    <main>
+    <section class="story-section" id="story">
+        <h2>Our Story</h2>
+        <p>Autumn Bakery began not in a professional kitchen, but in a quiet home corner fueled by simple curiosity. What started as a personal quest to master the perfect velvety cheesecake quickly blossomed into an obsession with the alchemy of baking.</p>
+        <p>From those early experiments, my love for the craft expanded—from perfecting the crumb of a signature cookie to mastering the delicate, salty bite of freshly baked sourdough bread. Every recipe here is a testament to those slow Sunday afternoons spent refining, tasting, and sharing the warmth of a home-baked treat.</p>
+    </section>
+
+    <main id="menu">
         <section class="grid-layout">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=800" alt="Cheesecake">
+                <h3>Velvety Cheesecake</h3>
+                <p>The one that started it all. Rich, smooth, and delicately balanced.</p>
+            </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=800" alt="Cookies">
                 <h3>Signature Cookies</h3>
-                <p>Delicate, house-made biscuits with a touch of nostalgia.</p>
+                <p>Buttery, chewy centers with crisp edges—the perfect comfort.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&q=80&w=800" alt="Tarts">
-                <h3>Artisan Tarts</h3>
-                <p>Seasonal fruit nested in our signature buttery, golden pastry.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800" alt="Bread">
-                <h3>Rustic Sourdough</h3>
-                <p>Naturally leavened and slow-fermented for a hearty crunch.</p>
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800" alt="Salt Bread">
+                <h3>Golden Salt Bread</h3>
+                <p>Light, airy, and kissed with sea salt for that addictive bite.</p>
             </div>
         </section>
     </main>
